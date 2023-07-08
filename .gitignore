@@ -35,3 +35,4 @@ build/
 
 /.idea/
 /src/main/java/com/alok/grpc/stub/
+/.idea/
