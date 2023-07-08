@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_package = "com.alok.grpc.stub";
+
+service AbcDataService {
+    // Streaming - Server
+    rpc getAbcData(AbcDataRequest) returns (stream AbcDataResponse);
+}
+
+message AbcDataRequest {
+    string id = 1;
+    string month = 2;
+}
+
+message AbcDataResponse {
+    string id = 1;
+    string month = 2;
+    AbcDataPayload abcData = 3;
+}
+
+message AbcDataPayload {
+    string x = 1;
+    string y = 2;
+    string z = 3;
+}
+
+message Empty {
+}
