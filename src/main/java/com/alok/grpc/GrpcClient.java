@@ -11,7 +11,6 @@ import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.StatusRuntimeException;
 
-import java.time.LocalDate;
 import java.time.YearMonth;
 import java.util.Iterator;
 import java.util.UUID;
@@ -53,11 +52,10 @@ public class GrpcClient {
             abcDataItr = blockingStub.getAbcData(request);
             for (int i = 1; abcDataItr.hasNext(); i++) {
                 AbcDataResponse abcData = abcDataItr.next();
-                System.out.println("RESPONSE::getAbcData - Price #" + i + ": " +  abcData);
+                System.out.println("RESPONSE::getAbcData - #" + i + ": " +  abcData);
             }
         } catch (StatusRuntimeException e) {
             System.out.println("RPC failed: " +  e.getStatus());
         }
-
     }
 }
