@@ -12,7 +12,7 @@
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>3.22.2</version>
+            <version>3.25.5</version>
         </dependency>
 
         <dependency>
@@ -23,7 +23,7 @@
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-protobuf</artifactId>
-            <version>1.53.0</version>
+            <version>1.63.0</version>
         </dependency>
         <dependency>
             <groupId>io.grpc</groupId>
